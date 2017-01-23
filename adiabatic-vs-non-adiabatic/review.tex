@@ -1,6 +1,6 @@
 \documentclass[journal=jacsat,manuscript=article]{achemso}
 
-%\usepackage{...}
+\usepackage{graphicx}
 
 \bibliographystyle{achemso}
 
@@ -33,7 +33,13 @@ Since the (N$_2^+$-Ar) complex has a large binding energy of 1.109 eV\cite{mahne
 \noindent
 Meuwly and coworkers\cite{unke.jcp.2016.n2plusargon,denisalpizar.2017.n2plusargon} constructed a state of the art (N$_2^+$-Ar) PES based on \textit{ab initio} energies computed at the UCCSD(T)-F12a/aug-cc-vtz level of theory using reproducing kernel Hilbert space (RKHS) theory.\cite{hollebeek.annrevphychem.1999.rkhs,unke.2017.rkhstoolkit} The RKHS method has the appealing quality that it exactly reproduces the given data, therefore allowing energy evaluations at practically \textit{ab initio} quality.\cite{unke.jcp.2016.n2plusargon} In order to assess the importance of multireference effects, additional calculations at the CASSCF/MRCI+Q level of theory were performed and it was concluded that UCCSD(T)-F12a/aug-cc-vtz is a sufficiently high level of theory.\cite{denisalpizar.2017.n2plusargon}
 Quantum close-coupling calculations\cite{denisalpizar.2017.n2plusargon} as well as quasi-classical trajectory (QCT) calculations\cite{unke.jcp.2016.n2plusargon,denisalpizar.2017.n2plusargon} were performed on the RKHS-PES using conditions similar to those in the experiment by Schlemmer \textit{et al.}\cite{schlemmer.ijms.1999.n2plusargon} The rate coefficients for rotational relaxation obtained by the quantum and QCT calculations agree favourably and range between  $5.34 \cdot 10^{-10}$ cm$^3$s$^{-1}$ and $6.96 \cdot 10^{-10}$ cm$^3$s$^{-1}$.\cite{denisalpizar.2017.n2plusargon} These rates are in line with the expected quick redistribution of rotational states and suggest that more than 70\% of collisions lead to a change of the rotational quantum state.\\
-\noindent Due to the high quality of the PES and the agreement of quasi-classical and quantum results, it is unlikely that the discrepancy to the experimentally observed rate is due to deficiencies of the applied computational methods. However, it is possible that the Born-Oppenheimer approximation is not valid for the (N$_2^+$-Ar) complex and non-adiabatic effects are important in the dynamics. This assumption is supported by the observation that the three lowest electronic states of  (N$_2^+$-Ar) are only energetically separated by about XXX cm$^-1$ in the long range part of the N$_2^+$ + Ar interaction. In fact, the separation of the electronic states is a function of the vibrational motion that the N$_2^+$ undergoes and therefore suggests that a coupling between nuclear and electronic degrees of freedom might exist.
+\noindent Due to the high quality of the PES and the agreement of quasi-classical and quantum results, it is unlikely that the discrepancy to the experimentally observed rate is due to deficiencies of the applied computational methods. However, it is possible that the Born-Oppenheimer approximation is not valid for the (N$_2^+$-Ar) complex and non-adiabatic effects are important in the dynamics. This assumption is supported by the observation that lowest excited electronic state of  (N$_2^+$-Ar) is only energetically separated by about 700 cm$^-1$ from the ground state in the long range part of the N$_2^+$ + Ar interaction (Fig. \ref{fig:n2arlevels}). In fact, the separation of the electronic states is a function of the vibrational motion that the N$_2^+$ undergoes and therefore suggests that a coupling between nuclear and electronic degrees of freedom might exist.\cite{denisalpizar.2017.n2plusargon}
+
+\begin{figure}
+	\includegraphics[scale=0.3]{fig/n2arlevels.png}
+	\caption{Interaction energy at the inner turning point ($r = 1.072 \AA$) of the $v = 0$ vibration for the three lowest electronic states of (N$_2^+$-Ar) (the angle between $r$ and $R$ is $168^{\circ}$). The curves were computed at the MRCI+Q/avtz level of theory in the $^2$A$'$ symmetry. Note that the separation between ground state and frist excited state is only about $700$ cm$^{-1}$ at around $R=4.5\AA$}
+	\label{fig:n2arlevels}
+\end{figure}
     
 \section*{Acknowledgments}
 The NCCR MUST (to MM) and the University of Basel are acknowledged.
