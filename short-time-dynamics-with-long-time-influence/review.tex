@@ -1,6 +1,7 @@
 \documentclass[journal=jacsat,manuscript=article]{achemso}
 
-%\usepackage{...}
+\usepackage{graphicx}
+\usepackage{amsmath}
 
 \bibliographystyle{achemso}
 
@@ -22,6 +23,24 @@
 
 \section{Introduction}
 \label{sec:introduction} 
+intentionally left blank
+
+    
+\section{Vibrationally induced photodissociation in gas phase} 
+\label{sec:vibphotodis} 
+For reactions in the atmosphere unimolecular dissociation often plays a key role. Those kind of processes can be initiated by overtone excitation, for example the photofragmentation of sulphuric acid (H$_2$SO$_4$) in the strato- and troposphere which can be induced by OH-stretching excitation. The dissociation products (water and sulphur-trioxide) are of importance to the tropospherical aerosol layer formation, which plays an important role for the climate and weather\cite{vaida.sci.2003.vibphotodis}.\\
+
+\noindent 
+Theoretical investigation of the reaction by Yosa \textit{et al.}\cite{reyes.pccp.2014.msarmd} were performed utilising MS-ARMD\cite{nagy.jctc.2014.msarmd}. This efficient surface crossing algorithm that combines (fitted) empirical force fields by a time-independent switching function to form a global potential energy surface (PES) is capable of treating several reaction pathways. This is necessary in the investigation of H$_2$SO$_4$, since the fragmentation pathway is in competition with intramolecular H-transfer reaction of similar barrier height. From several thousand independent ($NVE$) trajectories with a maximum simulation time of 1 ns it was found that the fast OH overtone vibration (period $T \approx 1-3$ fs) induces elimination on the pico- to nanosecond time scale, depending on the excitation state of the OH-stretching. Final state analysis of the resulting trajectories results in an energy distribution that can aid the identification of the products.\\
+
+\noindent
+Since no experimental verification for the OH-stretching overtone induced photofragmentation of H$_2$SO$_4$ exists, based on the low vapour pressure of the molecule and its equilibrium with its products in gas phase, derivatives of sulphuric acid have been considered for providing experimental proof of the reaction mechanism. Therefore MS-ARMD simulations on  sulphurchloridic acid (HSO$_3$Cl) were performed\cite{reyesbrickel.pccp.2016.msarmd}. The calculation were performed on a global PES, consisting of three, chemically equivalent, states describing the possible conformations of HSO$_3$Cl and one state describing the elimination product, SO$_3$ + HCl. The PES was parametrised to several thousand MP2/6-311G++(2,2p) reference points. 5000 independent trajectories with a simulation time of 2.5 ns give rise to up to 98\% of elimination. For low excitation energies ($\nu_{\text{OH}}$ = 3 and 4) the yield of photofragmentation is lower than the percentage of trajectories that show only H-transfer (thereby leading to complete intramolecular vibrational energy redistribution (IVR)). The direct elimination path for $\nu_{\text{OH}}$ = 3 yields only 0.2\% in comparison to 10\% IVR, for example. High excitation  energies ($\nu_{\text{OH}}$ = 5 and 6) have an increased yield of elimination. The photodissociation occurs here mostly by indirect elimination, i.e. elimination preceded by H-transfer. These two different ways of elimination (direct and indirect) occur on different time scales (see figure \ref{fig:vibphotodis}) and lead to a difference in the vibrational energy distribution of HCl. It was predicted that for direct elimination the diatomic fragment peaks around $j = $ 10, while for indirect elimination it peaks at slightly higher values. Overall it can be seen that the reaction occurs on the sub-ns to ns time scale, which is faster than collisionally induced quenching. The process of OH-stretching overtone induced photodissociation should therefore play a role in atmospheric chemistry and a deeper understanding can aid in, e.g. calculations of the climate.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{fig/reaction-path_time.png}
+	\caption{Schematic representation of the possible reaction paths of HSO$_3$Cl, including approximate time scales for an high excitation energy ($\nu_{\text{OH}}$ = 5 and 6).}
+	\label{fig:vibphotodis}
+\end{figure} 
     
 \section*{Acknowledgments}
 The NCCR MUST (to MM) and the University of Basel are acknowledged.
