@@ -5,13 +5,33 @@
 
 \bibliographystyle{achemso}
 
-\author{Markus Meuwly}
-\affiliation{Department of Chemistry, University of Basel, Klingelbergstrasse 80, CH-4056 Basel, Switzerland.}
-\email{m.meuwly@unibas.ch}
+
+\author{Krystel El Hage} \affiliation[University of Basel] {Department
+  of Chemistry, University of Basel, Klingelbergstrasse 80, 4056
+  Basel, Switzerland}
+\author{Luigi Bonacina, Cederic Schmidt, Geoffrey Gaulier}
+\affiliation[University of Geneva] {Department of Chemistry, University of Geneva}
+\author{Siri C. van Keulen}
+\affiliation[EPFL] {Department of Chemistry, EPFL}
+\author{QQQQ}
+\affiliation[EPFL] {Department of Chemistry, EPFL}
+\author{Majed Chergui}
+\affiliation[EPFL] {Department of Chemistry, EPFL}
+\author{Peter Hamm}
+\affiliation[University of Zurich] {Department of Chemistry, University of Zurich}
+\author{Ursula Roethlisberger}
+\affiliation[EPFL] {Department of Chemistry, EPFL}
+\author{Jean-Pierre Wolf}
+\affiliation[University of Geneva] {Department of Chemistry, University of Geneva}
+\author{Markus Meuwly} \email{m.meuwly@unibas.ch}
+\affiliation[University of Basel] {Department of Chemistry, University
+  of Basel,\\ Klingelbergstrasse 80, 4056 Basel, Switzerland}
+
 
 \date{\today}
 
-\title{}
+\title{Implications of Short Time Scale Dynamics on Long Time
+  Processes}
 
 \begin{document}
 
@@ -22,30 +42,576 @@
 \clearpage
 
 \section{Introduction}
-\label{sec:introduction} 
-intentionally left blank
+%{\bf Die Idee, die ich dabei verfolge, ist, das Problem aus einer
+%  "Energieperspektive" zu diskutieren. Energie laesst sich relativ
+%  "einfach" in ein System einspeisen, dann aber nur schwierig
+%  kontrollieren, wenn man nicht auch die Energie-Transfer-Kanaele
+%  kontrolliert. Dies geschieht in der Regel ueber structural
+%  constraints. Diese Denkweise verbindet die Konzepte "Energie",
+%  "Struktur" und "Zeit" miteinander.}
 
-    
-\section{Vibrationally induced photodissociation in gas phase} 
-\label{sec:vibphotodis} 
-For reactions in the atmosphere unimolecular dissociation often plays a key role. Those kind of processes can be initiated by overtone excitation, for example the photofragmentation of sulphuric acid (H$_2$SO$_4$) in the strato- and troposphere which can be induced by OH-stretching excitation. The dissociation products (water and sulphur-trioxide) are of importance to the tropospherical aerosol layer formation, which plays an important role for the climate and weather\cite{vaida.sci.2003.vibphotodis}.\\
+Many fundamental processes in chemistry, biology and physiology occur
+on time scales slower than microseconds but they have their origin in
+dynamics on the the femto- to picosecond time scale. A topical example
+is the generic time scale of a chemical reaction in solution which
+occurs on a typical time scale of a second. However, the actual
+elementary process (bond formation/bond breaking) is a picosecond
+process. The ultimate reason for this large span of time scales is the
+inefficient coupling of thermal motion of the atoms (primarily
+translational degrees of freedom) to the coordinate(s) along which the
+reaction progresses.
 
-\noindent 
-Theoretical investigation of the reaction by Yosa \textit{et al.}\cite{reyes.pccp.2014.msarmd} were performed utilising MS-ARMD\cite{nagy.jctc.2014.msarmd}. This efficient surface crossing algorithm that combines (fitted) empirical force fields by a time-independent switching function to form a global potential energy surface (PES) is capable of treating several reaction pathways. This is necessary in the investigation of H$_2$SO$_4$, since the fragmentation pathway is in competition with intramolecular H-transfer reaction of similar barrier height. From several thousand independent ($NVE$) trajectories with a maximum simulation time of 1 ns it was found that the fast OH overtone vibration (period $T \approx 1-3$ fs) induces elimination on the pico- to nanosecond time scale, depending on the excitation state of the OH-stretching. Final state analysis of the resulting trajectories results in an energy distribution that can aid the identification of the products.\\
+The purpose of this review is to highlight topical examples in which
+information and insight from short-time dynamics has implications for
+processes occurring on considerably longer time scales. One such
+example is the solvent dynamics around solutes which can be
+characterized experimentally at considerable detail on the picosecond
+time scale with implications for the solution thermodynamics of the
+solute. Other examples include the photophysics and photochemistry of
+small peptides or the molecular dynamics of hydrogen-bonded systems.
 
-\noindent
-Since no experimental verification for the OH-stretching overtone induced photofragmentation of H$_2$SO$_4$ exists, based on the low vapour pressure of the molecule and its equilibrium with its products in gas phase, derivatives of sulphuric acid have been considered for providing experimental proof of the reaction mechanism. Therefore MS-ARMD simulations on  sulphurchloridic acid (HSO$_3$Cl) were performed\cite{reyesbrickel.pccp.2016.msarmd}. The calculation were performed on a global PES, consisting of three, chemically equivalent, states describing the possible conformations of HSO$_3$Cl and one state describing the elimination product, SO$_3$ + HCl. The PES was parametrised to several thousand MP2/6-311G++(2,2p) reference points. 5000 independent trajectories with a simulation time of 2.5 ns give rise to up to 98\% of elimination. For low excitation energies ($\nu_{\text{OH}}$ = 3 and 4) the yield of photofragmentation is lower than the percentage of trajectories that show only H-transfer (thereby leading to complete intramolecular vibrational energy redistribution (IVR)). The direct elimination path for $\nu_{\text{OH}}$ = 3 yields only 0.2\% in comparison to 10\% IVR, for example. High excitation  energies ($\nu_{\text{OH}}$ = 5 and 6) have an increased yield of elimination. The photodissociation occurs here mostly by indirect elimination, i.e. elimination preceded by H-transfer. These two different ways of elimination (direct and indirect) occur on different time scales (see figure \ref{fig:vibphotodis}) and lead to a difference in the vibrational energy distribution of HCl. It was predicted that for direct elimination the diatomic fragment peaks around $j = $ 10, while for indirect elimination it peaks at slightly higher values. Overall it can be seen that the reaction occurs on the sub-ns to ns time scale, which is faster than collisionally induced quenching. The process of OH-stretching overtone induced photodissociation should therefore play a role in atmospheric chemistry and a deeper understanding can aid in, e.g. calculations of the climate.
+Triggering events provide energy which can be supplied to a system of
+interest in various ways. The most natural origin is thermal energy
+which, however, is often inefficient. Other possibilites include
+photoexcitation (flash photolysis, electronic excitation), ligand
+binding, pH-change, collisional excitation or the excitation of
+molecular vibrations. {\bf need suitable citations here.} Following
+such a change in the system, processes including catalysis or further
+protein-ligand binding can take place. Understanding the link between
+cause and effect and following the system's dynamics as a function of
+time is of fundamental importance for fully characterizing the
+function of a complex system and move towards molecular design.
+
+In situations where multiple elementary steps take place between the
+initial preparation and the finally observable state the sequence of
+events may also be unknown. Two examples should highlight this
+situation.
+\begin{itemize}
+\item In the homodimeric hemoglobin HbI from {\it Scapharca
+  inaequivalvis}
+  experiments\cite{Song1993,Royer1990,Knapp2005,Nienhaus2007,Chiancone2000,Eaton1999,choi2010}
+  and atomistic simulations\cite{Zhou2003,Knapp2009,MM.scapharca:2016}
+  have found that the functionally relevant dynamics between the deoxy
+  (T, ligand unbound) and the oxy (R, ligand bound) state is strongly
+  influenced by structural changes at the interface and the number of
+  water molecules between the two monomers. The most significant
+  tertiary structural change concerns the orientation of the
+  phenyl-sidechain of Phe97 in which the $\chi$ angle changes from
+  $50^\circ$ to $160^\circ$ upon ligand binding. The conformational
+  change is accompanied by a change in the degree of hydration of the
+  interface in that 17 water molecules are present in the deoxy state
+  and only 11 water molecules are found in the ligand-bound
+  protein. One open question is whether side-chain rotation drives
+  water diffusion or {\it vice versa}.
+
+\item Sensing environmental signals and rapid metabolic response in
+  bacteria can be accomplished through so-called "two-component"
+  signal transduction systems\cite{Stock2000_b} consisting of a
+  histidine protein kinase that transfers a phosphoryl group to a
+  conserved aspartate of a response regulator (RR) protein which
+  modulates its activity. The diguanylate cyclase PleD of {\it
+    Caulobacter crescentus} is such a response
+  regulator.\cite{Aldridge1999,Aldridge2003,Paul2004,Hecht1997} The
+  protein synthesizes the bacterial second messenger cyclic
+  di-guanylic monophosphate (c-di-GMP) \cite{Paul2004}, a molecule of
+  great interest which regulates surface-adhesion properties and
+  motility in bacteria \cite{Malone2006}. In order to carry out its
+  function, several elementary steps (protein dimerization, activation
+  through phosphorylation, allosteric (auto)inhibition) need to take
+  place.\cite{Jenal2006} However, the sequence in which these
+  elementary steps take place is unknown but of fundamental importance
+  to understand the mode-of-action of this protein.
+\end{itemize}
+
+Reasons for the wide spanning time scales between cause and effect are
+inefficient coupling to transfer energy between different degrees of
+freedom, the (slow) conformational dynamics which is a ``search
+problem'' on a high-dimensional, rough potential energy surface or
+energy dissipation due to friction. All these processes lead to a
+marked slowdown in transmitting the primary information into a
+productive channel. For processes in solution a further complication
+are entropic effects which can lead to additional slowdown. Finally,
+it is also possible that the ``initial'' and ``final'' state are
+connected through multiple pathways as in the photocycle or
+bacteriorhodopsin\cite{korenstein:1978} or ligand rebinding in
+neuroglobin.\cite{MM.cei:2013}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{fig/model.png}
+\caption{Illustration of a photoinduced process (red arrow) and the
+  ensuing dynamics along a conformational dynamics on the excited
+  state potential energy surface spanning several orders of
+  magnitude. The orange curve tracks the excited state dynamics in
+  different basins and on different time scales.}
+\label{fig:model}
+\end{figure}
+
+
+
+
+
+\section{From fs to $\mu$s:
+  Sequential Proton Coupled Electron Transfer (PCET): Dynamics
+  Observed over 8 Orders of Magnitude in Time}
+
+L.MacAlasee and co-authors investigated the process of Proton Coupled
+Electron Transfer (PCET) in a silver-containing metal-peptide cation
+synthetized from histidine (H), glycine (G) and tryptophan (W):
+[HG3W+Ag]+. Very notably, the authors were able to observe an overall
+PCET dynamics spanning 8 orders of magnitude in time.  The experiment
+is based on the combination of mass spectroscopy and pump-probe
+optical spectroscopy. After being electrosprayed, the sample is
+trapped for 200 ms in a high-pressure (5 mTorr) chamber inside the
+mass spectrometer. The device is custom modified and features an
+optical aperture to let the laser beams in.  To cover the extremely
+long time span of the process investigated, both femtosecond lasers
+with optical delay lines and nanosecond lasers with electronic
+time-synchronization are employed. By analyzing the time-resolved
+traces of i) silver-containing against silver-free ions over the first
+30 ps and ii) the evolution of the fragmentation yield of the radical
+peptide [HG3W]$\cdot ^+$ up to 1 ms, the authors could monitor
+electron and proton transfer on their respective time scales. The
+final picture which emerges from this work is the following: a $\pi
+\rightarrow \pi*$ transition of tryptophan is firstly excited upon 266
+nm photo-excitation, this in turns leads the system onto an electron
+transfer state where Ag is neutral and both charge and radical are
+localized on tryptophan (Fig. \ref{fig:fig1jacs}). After this short
+dynamics (3.5 ps), a proton is transferred from tryptophan to
+histidine with a time-scale of the order of hundreds of
+microseconds. Molecular dynamics simulations indicate that, although
+the rate of formation of a proton-transfer reactive structure can be
+as short as a few nanoseconds for such a structure, this time-scale is
+strongly influenced by the initial peptide conformation. In
+particular, the presence of Ag$^+$ in [HG3W+Ag]$^+$ entails a series
+of structural changes including un unfavorable orientation of the
+tryptophan side chain with respect to histidine and the presence of
+several H-bonds, which lock the initial conformation hindering the
+formation of a proton-transfer structure
+(Fig. \ref{fig:fig5jacs}). Indeed, the calculations based on this
+conformation do not predict the occurrence of proton-transfer up to 8
+$\mu$s, consistently with a major slowing-down of the proton-transfer
+process as observed experimentally.
+
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{fig/wolfjacsf1.png}
+\caption{Schematic representation of PCET dynamics in [HG$_3$W +
+    Ag]$^+$ metal−peptide complexes. Irradiation at 266 nm initiates
+  an electron transfer from tryptophan to Ag$^+$ , leading to the loss
+  of Ag.  The electron transfer is followed by a proton transfer from
+  tryptophan to histidine with formation of a distonic ion. The
+  peptide structures are schemes and do not correspond to calculated
+  structures.}
+\label{fig:fig1jacs}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{fig/wolfjacsf5.png}
+\caption{IndoleNH−imidazoleN distance distribution in HG$_3$W$^{.+}$
+  over 50 independent runs of 10 ns each, starting from an extended
+  structure (A) and two compact structures (B and C) obtained from the
+  [HG$_3$WAg]$^+$ complex. (D) Same but over 8 independent runs of 1
+  μs each, starting from structures in C. Insets show superpositions
+  of structures from MD trajectories.}
+\label{fig:fig5jacs}
+\end{figure}
+
+
+\section{From fs to ???: Rhodopsin}
+The vision process, which entails a long cascade of events going from
+initial photon absorption to nerve-impulse generation, is triggered by
+the rhodopsin-bound 11-cis-retinal to all-trans retinal isomerization
+(see Fig. \ref{fig:wolf1}). The ultrafast investigation of this
+primary vision step started with the pioneering paper by the Shank
+group where the arrival in the isomerization state in less than 100 fs
+was time-resolved using a transient absorption
+scheme.\cite{schonlein:1991} Shortly after, Wang et al. showed
+wavepacket oscillations in this molecule demonstrating that coherence
+is preserved for at least 2 ps after photo-excitation despite the
+passage through the conical intersection leading to
+isomerization.\cite{wang:1994} Gerber’s and Cerullo’s groups
+demonstrated that it was possible to transfer the excited population
+back to the 11-cis ground state by stimulated emission before the
+transition through the conical transition takes
+place.\cite{polli:2010,gerber:2006}\\
+
+In 2005, Miller and Prokhorenko provided an experimental demonstration
+of optimal quantum control of the retinal photo-isomerization in
+bacteriorhodopsin.\cite{miller:2005} The authors showed that by
+applying an optimally shaped laser pulse retrieved using a
+closed-feedback approach, it was possible to increase the retinal
+photo-isomerization yield by 20\% as compared to a Fourier limited
+femtosecond pulse. Conversely, an anti-optimal pulse shape reduced the
+photo-isomerization efficiency by 20\%. Miller’s results demonstrated
+that the primary vision step could be modulated by the spectral phase
+of light. However, these works were all performed on molecules in
+solution, while the possibility of extending the phase-sensitive
+interaction with the primary vision step to the overall vision process
+in living beings was far from being assessed.  Moving on this pathway,
+Schmidt et al. have recently investigated whether it is possible to
+manipulate the photo-isomerization yield of photoreceptor molecules in
+a live mouse by modulating the spectral phase of a green femtosecond
+light pulse and record the electric signal generated by the
+retina. Their experiment is based on a KHz amplified Ti:Sapphire laser
+system coupled with a noncollinear parametric amplifier generating 50
+fs pulses at 535 nm. A pulse shaper device is used to act upon the
+spectral phase function generating positively and negatively chirped
+pulses ranging from -1300 to 1300 fs. The beam is sent onto the eye of
+the anesthetized mouse by passing through an index-matching medium to
+correct for the eye curvature. The experimental read-out relies on
+electroretinography (ERG). Namely, the visual response of an
+anesthetized animal is cacquired by three electrodes placed
+respectively in contact with the irradiated eye, the forehead, and
+under skin in the tail (for ground voltage reference). The signals are
+first frequency filtered and pre-amplified. Successively, after being
+processed by a differential amplifier, the resulting signal is fed
+into a fast oscilloscope and converted into a digital trace. So far,
+the researchers limited their investigation to the effect of
+positively and negatively chirped pulses. The results are presented in
+Fig. \ref{fig:wolf2}. In these ERG traces, one can recognize the
+characteristic a- (negative at early times) and b- (positive, at later
+times) waves. The former is mainly attributed to cone activity and the
+latter to second-order retinal neurons from cones. The results
+indicate that there exist significant differences among the traces
+obtained with different pulses, pointing unambiguously to the fact
+that a modulation of photo-isomerization can induce effect at the end
+of the cascade of events leading to the retina signal generation.
+
+
 
 \begin{figure}
-	\includegraphics[width=\textwidth]{fig/reaction-path_time.png}
-	\caption{Schematic representation of the possible reaction paths of HSO$_3$Cl, including approximate time scales for an high excitation energy ($\nu_{\text{OH}}$ = 5 and 6).}
-	\label{fig:vibphotodis}
+\includegraphics[width=\textwidth]{fig/wolf1.png}
+\caption{        }
+\label{fig:wolf1}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/wolf2.png}
+\caption{        }
+\label{fig:wolf2}
+\end{figure} 
+
+
+\section{From fs to ps and ns: Local Perturbations to Mimic Allosteric Dynamics}
+Allostery is the coupling of conformational changes between two
+separated sites of a protein. Allostery is an important mechanism that
+Nature uses regulate the affinity of certain substrates to a protein,
+thereby controlling metabolism. According to the conventional view of
+allostery, a conformational change of the protein (that might however
+be very small~\cite{Nussinov15}) is the source of a signal, but it
+should be noted that other mechanisms have been proposed as well that
+work exclusively with dynamical properties~\cite{cooper84}. In any
+case, binding of a ligand at a so-called \textit{allosteric site}
+increases (or decreases) the affinity for a substrate at a distant
+\textit{active site}. Hence, an allosteric protein can be viewed as a
+``transistor'', and complicated feedback networks of many such
+switches ultimately make up a living cell~\cite{alon07}.
+
+The ``textbook'' explanation of allostery is depicted in
+Fig.~\ref{figAllostery}a. From the point of view of allosteric
+regulation, this picture might appear sufficient, i.e., what we need
+to know is the change of binding affinity depending on whether or not
+a ligand is bound to the allosteric site. This is essentially the
+level of description of the MWC model to explain the cooperative
+binding of oxygen to hemoglobin - the prototype example of allosteric
+regulation~\cite{Eaton99}. However, from a microscopic, atomistic
+point of view, Fig.~\ref{figAllostery}a does not say much about how,
+why and how quickly the transition occurs. Given the complexity of the
+regulation network in a living cell, the switching speed, albeit
+probably being fast on the biological timescale, might not be
+irrelevant.
+
+
+The equivalent of the level of description of Fig.~\ref{figAllostery}a
+applied to the protein folding problem would reduce the latter to a
+folding free energy. Again, from a higher biological perspective, this
+is often sufficient, as all we need to know is how stable a protein is
+and what its folded structure is. Nevertheless, the protein folding
+problem has, of course, been tackled on a much more microscopic level,
+leading to concepts such as the folding funnel, rugged energy
+landscapes, down-hill folders, folding networks, etc.~\cite{brooks98,
+  dill08,kubelka04,Gruebele99,krivov04,caflisch06}. The emerging view
+of allostery works on the hypothesis that any protein exists as a
+conformational ensemble, and that a conformational change upon ligand
+binding is the result of a shift in populations within that
+ensemble~\cite{gunasekaran04, tsai14}.
+
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/figAllostery.pdf}
+\caption{(a) The ``textbook'' explanation of allosteric regulation: A
+  ligand (orange) binds to the allosteric site of a protein, thereby
+  changing the binding affinity for a substrate at a distant active
+  site (red). (b) A PDZ2 domain with an azobenzene-moiety linked
+  across the ligand binding groove (PDB entries 2M0Z and 2M10)}
+\label{figAllostery}
+\end{figure}
+
+With the one exception of hemoglobin~\cite{Eaton99}, the dynamics of
+the structural transition giving rise to allosteric regulation has not
+been investigated with high time resolution. Despite the fact that it
+is not its natural function, hemoglobin is photo-switchable in its
+natural form through the photo-dissociation of a heme-CO, enabling
+time-resolved experiments with essentially unlimited time
+resolution. It has been found that tertiary conformational changes
+occur in the time range from 1~ns to 1~$\mu$s in a highly
+non-exponential manner, whereas quaternary changes are slower.
+
+We recently set out to develop tools to initiate an allosteric
+response in a protein that is not \textit{per se}
+photoswitchable~\cite{buchli13,waldauer14,buchenberg14}, applying a
+concept that has first been introduced by Woolley and
+coworkers~\cite{kum00, woolley05, beharry11}. To that end, an
+azobenzene-derivative is used as a photoswitch, which can be
+isomerized between its \textit{cis} and a \textit{trans} conformer
+with light of different wavelength on a very fast 1~ps timescale. The
+switch is chemically designed such that it can be covalently linked to
+virtually any position at the protein surface via two
+cysteines. Hence, upon photo-isomerization, one may apply a force
+between two points of a protein in a extremely well controlled
+manner. In the past, the concept has mostly been used to initiate
+folding/unfolding of small peptides~\cite{ihalainen08,schrader07} or
+proteins~\cite{zhang09}, and we now set out to apply it to a bi-stable
+system, i.e., switching between the two states of an allosteric
+protein.
+
+We chose the second PDZ (PDZ2) domain from human tyrosine-phosphatase
+1E (hPTP1E) for these studies, which has been demonstrated to possess
+allosteric properties~\cite{fuentes04}, and which has served as a
+model system for allostery for a long time. Possible signal
+transduction pathways and mechanisms have been widely investigated by
+md simulations as well as bioinformatics approaches~\cite{Ota05,
+  DeLosRios05,sharp06, Dhulesia08, Kong09, Gerek11,
+  Cilia12,lockless99,suel03,Chi08}. The PDZ2 domain is a small 96
+residue protein with a binding groove between the $\alpha_2$-helix and
+the $\beta_2$-strand (see Fig. \ref{figAllostery}b). Binding of a
+ligand results in a small but measurable structural change with an
+rmsd of the binding groove of $\approx$0.4~\AA, according to X-ray
+crystallography~\cite{zhang10}.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/figResponse.pdf}
+\caption{Response of the PDZ2 domain after perturbing the binding
+  groove with the help of a azobenzene-crosslinker, measured by
+  transient IR spectroscopy. The red data show the response of the
+  protein as a whole via the amide I band, and the green data that of
+  a vibrational mode localized on the azobenzene-crosslinker. Adapted
+  from Ref.~\cite{buchli13} with permission.}
+\label{figResponse}
+\end{figure}
+
+Transient IR spectroscopy has been used to study the response of the
+protein upon photo-triggering the azobenzene-crosslinker
+(Fig.~\ref{figResponse})~\cite{buchli13}. The initial event, i.e., the
+actual photo-isomerization the azobenzene-moiety, is a barrierless
+photochemical reaction that occurs on a few 100~fs
+timescale~\cite{naeg97}. It triggers a cascade of events in the
+protein, which cover even orders of magnitudes in time. Three phases
+can be distinguished: During phase I up to $\approx$40~ps, the heat
+deposited into the protein as a result of the photo-isomerization of
+the cross-linker, which dissipates about 3 eV of vibrational energy,
+cools into the solvent. Next, during phase II from $\approx$40~ps to
+$\approx$100~ns, the binding groove opens, observed via the response
+of a vibrational mode localized on the azobenzene-crosslinker
+(Fig.~\ref{figResponse}, green). Finally, during phase III beyond
+$\approx$100~ns, more remote parts of the protein adapt to the
+perturbation, seen as a delayed response of the amide I band which
+reports on the structure of the protein backbone
+(Fig.~\ref{figResponse}, red).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/figMechanism.pdf}
+\caption{Mechanism of the allosteric response.}
+\label{figMech}
+\end{figure}
+
+In Refs.~\cite{buchli13,waldauer14}, we have mostly focused on phase
+II, i.e., the opening of the binding groove, which occurs in a highly
+non-exponential manner and by itself covers 3.5 orders of magnitudes
+in time. Non-exponential protein dynamics have been discussed
+extensively, for instance in the context of ligand (CO) dissociation
+and rebinding in hemoglobin or myoglobin~\cite{Frauenfelder91,
+  frauenfelder09}. Two limiting scenarios are typically discussed: A
+parallel process is characterized by a distribution of exponential
+decay processes, originating from a distribution of barrier heights in
+an inhomogeneous ensemble of proteins (Fig.~\ref{figMech}a). In that
+case, individual single-molecule trajectories would still behave as
+two-state system with either a closed or an open binding groove, and
+one would observe essentially sudden jumps between these two states
+(Fig.~\ref{figMech}c, black). The distribution of jump times would be
+non-exponential, revealing a non-exponential response after ensemble
+averaging (Fig.~\ref{figMech}c, red). In the opposite limit, the
+system diffuses on a rugged, highly dimensional energy landscape
+(Fig.~\ref{figMech}b), which commonly leads to non-exponential
+response as well~\cite{jaeckle86}. In this case, single-molecule
+trajectories would essentially be equivalent with the average, apart
+from statistical noise, without big jump (Fig.~\ref{figMech}c, black
+versus red). This is indeed what has been observed in accompanying MD
+simulations~\cite{buchli13}. We furthermore found that water friction
+is in part the source of the ruggedness of the protein energy
+landscape~\cite{buchli13,waldauer14}. That result agrees with the view
+that the allosteric response is related to a shift in populations
+between the substates of an ensemble of protein
+conformations~\cite{gunasekaran04, tsai14}. The response thus shares
+many properties with downhill folding~\cite{kubelka04,yang03,sadqi06}.
+
+Fig.~\ref{figResponse} also illustrates a limitation of our work so
+far. While by chance we could isolate one vibrational mode localized
+on the photo-switch (Fig.~\ref{figResponse}, green), which enabled us
+to draw very specific conclusions on the binding groove
+dynamics~\cite{buchli13,waldauer14}, the response of the amide~I band
+(Fig.~\ref{figResponse}, red) averages over the whole protein without
+any site-specific information. While MD
+simulations~\cite{buchenberg14} suggest that these slower processes
+are related to conformational changes in the floppy parts of the
+protein (i.e., termini and loop regions), and as such might actually
+be related to the allosteric signalling in ``remote^^ parts of the
+protein, we do not yet have any direct experimental support for
+that. We currently work on the incorporation of non-natural
+amino-acids containing isolated vibrational labels, similar to
+Ref.~\cite{bloem12}, which eventually should allow us to retrieve
+site-selective information from transient IR spectroscopy in a
+versatile manner.
+
+
+
+
+
+
+
+
+\section{From ps to ms: Vibrationally induced photodissociation in gas phase} 
+\label{sec:vibphotodis} 
+For reactions in the atmosphere unimolecular dissociation often plays
+a key role. Those kind of processes can be initiated by overtone
+excitation, for example the photofragmentation of sulphuric acid
+(H$_2$SO$_4$) in the strato- and troposphere which can be induced by
+OH-stretching excitation. The dissociation products (water and
+sulphur-trioxide) are of importance to the tropospherical aerosol
+layer formation, which plays an important role for the climate and
+weather\cite{vaida.sci.2003.vibphotodis}.\\
+
+\noindent 
+Theoretical investigation of the reaction by Yosa \textit{et
+  al.}\cite{reyes.pccp.2014.msarmd} were performed utilising
+MS-ARMD\cite{nagy.jctc.2014.msarmd}. This efficient surface crossing
+algorithm that combines (fitted) empirical force fields by a
+time-independent switching function to form a global potential energy
+surface (PES) is capable of treating several reaction pathways. This
+is necessary in the investigation of H$_2$SO$_4$, since the
+fragmentation pathway is in competition with intramolecular H-transfer
+reaction of similar barrier height. From several thousand independent
+($NVE$) trajectories with a maximum simulation time of 1 ns it was
+found that the fast OH overtone vibration (period $T \approx 1-3$ fs)
+induces elimination on the pico- to nanosecond time scale, depending
+on the excitation state of the OH-stretching. Final state analysis of
+the resulting trajectories results in an energy distribution that can
+aid the identification of the products.\\
+
+\noindent
+Since no experimental verification for the OH-stretching overtone
+induced photofragmentation of H$_2$SO$_4$ exists, based on the low
+vapour pressure of the molecule and its equilibrium with its products
+in gas phase, derivatives of sulphuric acid have been considered for
+providing experimental proof of the reaction mechanism. Therefore
+MS-ARMD simulations on sulphurchloridic acid (HSO$_3$Cl) were
+performed\cite{reyesbrickel.pccp.2016.msarmd}. The calculation were
+performed on a global PES, consisting of three, chemically equivalent,
+states describing the possible conformations of HSO$_3$Cl and one
+state describing the elimination product, SO$_3$ + HCl. The PES was
+parametrised to several thousand MP2/6-311G++(2,2p) reference
+points. 5000 independent trajectories with a simulation time of 2.5 ns
+give rise to up to 98\% of elimination. For low excitation energies
+($\nu_{\text{OH}}$ = 3 and 4) the yield of photofragmentation is lower
+than the percentage of trajectories that show only H-transfer (thereby
+leading to complete intramolecular vibrational energy redistribution
+(IVR)). The direct elimination path for $\nu_{\text{OH}}$ = 3 yields
+only 0.2\% in comparison to 10\% IVR, for example. High excitation
+energies ($\nu_{\text{OH}}$ = 5 and 6) have an increased yield of
+elimination. The photodissociation occurs here mostly by indirect
+elimination, i.e. elimination preceded by H-transfer. These two
+different ways of elimination (direct and indirect) occur on different
+time scales (see figure \ref{fig:vibphotodis}) and lead to a
+difference in the vibrational energy distribution of HCl. It was
+predicted that for direct elimination the diatomic fragment peaks
+around $j = $ 10, while for indirect elimination it peaks at slightly
+higher values. Overall it can be seen that the reaction occurs on the
+sub-ns to ns time scale, which is faster than collisionally induced
+quenching. The process of OH-stretching overtone induced
+photodissociation should therefore play a role in atmospheric
+chemistry and a deeper understanding can aid in, e.g. calculations of
+the climate.
+
+
+\section{Majed}
+Our group has been focusing on new methods to probe the electronic and
+structural dynamics of various biological and chemical samples. In
+particular, the implementation of the first ultrafast 2D set up in the
+deep-UV has been a game changer.\cite{aubock:2012,aubock2:2012}
+
+As far as proteins are concerned, this set-up allowed us to unravel
+hitherto unknown electron-transfer (ET) processes from photoexcited
+tryptophan to the heme in ferric myoglobins (Mb),\cite{consani:2013}
+and in deoxy-Mb\cite{monni:2015} while fluorescence resonant energy
+transfer (FRET) has been assumed so far. The time scales for ET is
+about 20-30 ps, which is relatively slow, but the mechanism is still
+unclear. We recently extended the above studies to ligated Mbs, but in
+order to avoid the interference of time scales due to ET and to ligand
+dynamics we used an IR probe. The results vary remarkably with the
+ligand: with CN a reduction of the Fe atoms is observed but some
+degree of electron density is on the porphyrin, with NO the electron
+goes to the latter, while with CO, the electron is predominantly on
+the porphyrin but further CO ligand dissociation from the porphyrin
+anion occurs on a time scale of approx. 200 ps, typical of protein
+fluctuations.\cite{monni:prep}
+
+Such time scale have been inferred from studies of ligand
+recombination as those performed using visible or IR probe, but no
+direct evidence that they are caused by protein motions was
+available. In a recent ps X-ray absorption spectroscopic study, we
+showed that indeed, such long time scales are due to the return of NO
+ligand to the Fe atom of the porphyrin,\cite{silatani:2015} which is
+facilitated by protein fluctuations.
+
+As far as molecules are concerned, we had already shown that the
+intersystem crossing (ISC) rate in diplatinum complexes can be tuned
+by solvent effects.\cite{chergui.jacs.2011} However, the fastest time
+was in the 10 ps range. Recently, we unraveled a dramatic acceleration
+of the ISC in some solvents, to the point that a transfer of
+vibrational coherence from the singlet to the triplet state was
+observed.\cite{monni:2017,monni:rev} This acceleration was
+rationalized by quantum mechanical MD simulations showing that
+strongly solvated and mixed high lying excited state serve as the
+doorway for the ISC, which is in the order of 700 fs. Over the past
+few years, we have shown that ISC times in metal complexes span values
+ranging from a few tens of fs to several tens of ps, but that the
+so-called “heavy atom effect” is not verified. While the spin-orbit
+coupling constant of the metal atom is crucial, other considerations
+such as density of states and the structural dynamics play a very
+important role, too.\cite{chergui:2012,chergui:2015}
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/reaction-path_time.png}
+\caption{Schematic representation of the possible reaction paths of HSO$_3$Cl, including approximate time scales for an high excitation energy ($\nu_{\text{OH}}$ = 5 and 6).}
+\label{fig:vibphotodis}
 \end{figure} 
     
 \section*{Acknowledgments}
 The NCCR MUST (to MM) and the University of Basel are acknowledged.
 
 
-\bibliography{../literature}
+\bibliography{../literature,library}
 
 \end{document}
