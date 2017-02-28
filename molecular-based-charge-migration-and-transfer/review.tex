@@ -4,7 +4,7 @@
 
 \bibliographystyle{achemso}
 
-\author{Markus Meuwly}
+\author{Akshaya K. Das and Markus Meuwly}
 \affiliation{Department of Chemistry, University of Basel, Klingelbergstrasse 80, CH-4056 Basel, Switzerland.}
 \email{m.meuwly@unibas.ch}
 
@@ -20,8 +20,72 @@
 
 \clearpage
 
-\section{Introduction}
-\label{sec:introduction} 
+\section{Solvent Dynamics Following Oxidation Reactions in Model Systems}
+Solvent molecules around metal complexes are of fundamental and
+practical relevance both, in catalysis and in solar energy
+conversion.\cite{Balzani96,macchioni,Kalyan98} However, directly
+observing and characterizing the influence and role of solvent is
+difficult experimentally mainly because of the transient nature of the
+process and the finite time resolution of the experiments.
+
+A pivotal system to study solvent reorganization following
+photoexcitation (oxidation) is Fe-tris-bipyridine
+[Fe(bpy)$_3$]$^{2+}$. Iron-containing complexes constitute an
+important and versatile class of metal complexes. Depending on the
+strength of the ligands they can exist either in a low (LS) or in a
+high spin (HS) state. Specifically, the [Fe(II)(bpy)$_3$] complex
+exhibits two spin states: a LS singlet ($^1$A$_1$) and a HS quintet
+($^5$T$_2$).\cite{scienceChergui,Gaffney} Between these two states,
+excited state charge transfer and spin dynamics takes place (spin
+crossover - SCO - dynamics) which can be induced by illumination,
+temperature or pressure changes.\cite{Haldrup}
+
+Photoexcitation of the iron-complex leads to a non-equilibrium
+preparation of the system from where it relaxes towards a new
+stationary state. Such processes can be investigated with state-of-the
+art X-ray spectroscopic techniques. However, directly observing and
+characterizing the influence and role of solvent is difficult
+experimentally mainly because of the transient nature of the process
+and the finite time resolution of the experiments.
+
+Atomistic simulations with validated force fields constitute a
+complement to such experiments and provide detailed molecular-level
+insight into the motions and time scales involved. For the present
+situation the VALBOND force field provides the necessary accuracy. It
+is based on valence bond theory and capable to more realistically
+describe angle bending in metal
+complexes.\cite{Landis1,Landis2,Landis3} Unlike the simple harmonic
+approximation, VALBOND bending functions capture the energetics at
+very large angular distortions and support hypervalent compounds by
+means of 3-center-4-electron bonds.\cite{Landis2}
+
+The system considered is one [Fe(bpy)$_3$]$^{2+}$ solvated in explicit
+water.\cite{das:2016} Suitable force fields were parametrized and
+validated for three states: Fe(II)$\rm _{LS}$, Fe(II)$\rm _{HS}$ and
+Fe(III). The actual simulations were started in the Fe(II)$\rm _{LS}$
+state and electronic excitation to Fe(III) was induced by
+instantaneously changing the force field parameters between the two
+oxidation states. Similarly, the relaxation process of Fe(III) to
+Fe(II)$\rm_{HS}$ was carried out by changing the force field
+parameters from Fe(III) to Fe(II)$\rm _{HS}$. Such perturbations lead
+to a non-equilibrium situation from which the system relaxes towards
+an equilibrium state.
+
+The analysis of the molecular dynamics trajectories included the
+radial distribution functions $g(r)$ between the complex and the
+solvent water and the lifetime of the water molecules close to the
+complex. It was found\cite{das:2016} that the degree of solvation
+decreases on a sub-picosecond time scale and originates from the
+excitation to the $^{1,3}$MLCT band. Hence, water expulsion occurs
+between [Fe(II)$_{\rm LS}$(bpy)$_3$] and the $^{1,3}$MLCT state. The
+process is electronically driven and occurs on a sub-picosecond time
+scale. Furthermore it was found that relaxation of the non-equilibrium
+ensemble of the $^{1,3}$MLCT state to the equilibrium [Fe(II)$_{\rm
+    HS}$(bpy)$_3$] state occurs on the picosecond time scale which
+agrees with recent experiments\cite{Majed2015} and the water exchange
+dynamics in the inner shells close to the metal center take place on
+the picosecond time scale.
+
     
 \section*{Acknowledgments}
 The NCCR MUST (to MM) and the University of Basel are acknowledged.
