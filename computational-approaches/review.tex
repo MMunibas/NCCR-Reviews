@@ -4,7 +4,7 @@
 
 \bibliographystyle{achemso}
 
-\author{Markus Meuwly}
+\author{Zhen-Hao Xu, Krystel El Hage and Markus Meuwly}
 \affiliation{Department of Chemistry, University of Basel, Klingelbergstrasse 80, CH-4056 Basel, Switzerland.}
 \email{m.meuwly@unibas.ch}
 
@@ -20,8 +20,66 @@
 
 \clearpage
 
-\section{Introduction}
-\label{sec:introduction} 
+\section{MMPT force field}
+The proton transfer (PT) reactions involve with a variety of biochemical processes.
+The importance of this reaction is of great interests in the research fields of simulated spectroscopy\cite{wolke.sci.2016.watercluster,fournier.pnas.2014.watercluster,mackeprangmeuwly.pccp.2016.mmpt,wolkejohnson.jpca.2015.oxalate,howardmeuwly.jpca.2015.mmpt}, reaction kinetics\cite{huangmeuwly.pccp.2014.kie} and charge conduction regarding selective permeability and fuel cells\cite{luduenasebastiani.cm.2011.conduct}.
+Computationally, proton transfer reactions have been studied in both localized and non-localized forms.
+To further detail the definitions, a localized PT reaction refers to a proton transfer move between two predefined proton acceptors, i.e. oxygens or nitrogens\cite{lammersmeuwly.jcc.2008.mmpt}.
+The PT reaction in a non-localized form considers a continuous procedure of stepwise PT moves among multiple molecules, which is in general understood as Grotthuss mechanism. In recent years, Molecular Mechanics with Proton Transfer (MMPT) has been developed as a force field method with complete Newtonian treatment for atomistic simulations which involve with proton transfer reactions\cite{lammersmeuwly.jcc.2008.mmpt,yangmeuwly.jcp.2010.mmpt}.
+\\
+\noindent
+In this approach, multi-dimensioned potential energy surfaces (PES) is parametrized from \emph{ab initio} calculation into forms of overlapped Morse potential. In order to explore the dynamics of proton transfer reactions and hydrogen bondings in biochemical systems with MMPT force field, Lammers \emph{et al.}\cite{lammersmeuwly.jcc.2008.mmpt} defined a PT moiety which includes a transferring proton/hydrogen (H*) and its donor ($ D $) and acceptor ($ A $) atoms. In stead of using classical force field, for concerned degrees of freedom a three-dimensional PES for PT reactions can be given in an analytic form.
+\begin{equation}
+V_{\textrm{MMPT}}=\left\{
+\begin{array}{ll}
+V_{0}(R,\rho)+k\cdot\theta^2\textrm{, if a proton moves in a linear path}\\
+V_{0}(R,\rho)+V_{d}(R,\rho,d)\textrm{, if a proton moves in a non-linear path}
+\end{array}
+\right.
+\label{eq:vmmpt}
+\end{equation}
+$ R $ is the distance of $ D$ and $A $ and $ r $ is the distance of $ D$ and H*.
+These two variables further donate into a reaction coordinate which is shown as $ \rho=(r-0.8~\rm\AA)/(R-1.6~\rm\AA)\in [0,1] $.
+In Eq. \ref{eq:vmmpt}, the 2D potential $ V_{0}(R,\rho) $ is in a form of superposed Morse potential functions, which associates with the major coordinates regarding the PT reactions. In a linear PT reaction, a third dimension, $ \theta $, represents for $ \angle D-\textrm{H*}-A $ and is approximated by harmonic constrains\cite{lammersmeuwly.jcc.2008.mmpt,lammersmeuwly.jpca.2007.mmptdpt}. 
+To extend the viability of MMPT force field, Yang \emph{et al.}\cite{yangmeuwly.jcp.2010.mmpt} further developed this force field for describing reaction systems with non-linear hydrogen bonds.
+Unlike the linear PT reaction, the MMPT potential in a non-linear form regards the third dimension as $ d=r\cdot\sin\theta $ and $ V_{d}(R,\rho,d) $ represents for a specific harmonic constrain. In this study, the parametrization of MMPT force field has been validated from the infrared spectra of the experiments.
+\\
+\noindent
+For similar systems to malonaldehyde, Howard \emph{et al.} investigated infrared and near-infrared spectra (NIR) of acetylacetone (AcAc), acetylacetone-$ d_8 $ and hexafluoroacetylacetone\cite{howardmeuwly.jpca.2015.mmpt}.
+ In this study, the fundamental OH-stretching bands were reported and red-shifted relative to those of usual OH stretching transitions. By using MMPT force field, the computed spectra from atomistic simulations of AcAc in the gas phase reproduce
+most of experimental records, especially the OH-stretching (or proton transfer) band was found broad and week. This band is located in the region of 2000 cm$ ^{-1} $ $ \sim $ 3000 cm$ ^{-1} $ which is in good agreement with experimental observation.
+Furthermore, the location of this band was found that has a sensitive dependence of the barrier height for PT reaction and a barrier of 2.4 kcal/mol was concluded.
+\\
+\noindent
+Regarding the empirical relation between the position of OH-stretching  band and the barrier height of PT reactions, this is also an issue of how to obtain spectroscopically accurate force field for atomistic simulations. Such an interest was also concerned in a recent study for double proton transfer (DPT) in formic acid dimer (FAD)\cite{mackeprangmeuwly.pccp.2016.mmpt}. In addition to the conventional MMPT force field, a coupling effect was introduced since the DPT reaction of FAD occurs in a concerted pathway.
+In MMPT force field, the total potential energy of a DPT reaction can be given as
+\begin{equation}
+V_{\rm DPT} (r_1,R_1,\theta_1,r_2,R_2,\theta_2)=\big[V_{\rm 
+sym}(r_1,R_1,\theta_1)\cdot\gamma+V_{\rm asy}(r_1,R_1,\theta_1)\cdot(1-\gamma)\big]
+\label{eq:edpt}
+\end{equation}
+{\centering$ +\big[V_{\rm sym}(r_2,R_2,\theta_2)\cdot\gamma+V_{\rm asy}(r_2,R_2,\theta_2)\cdot(1-\gamma)\big], $}
+\\
+\\
+\noindent
+where $ \{r_1,R_1,\theta_1\} $ and $ \{r_2,R_2,\theta_2\} $ stand for the coordinates of two PT moieties and the coupling effect is parametrized as a switch factor, $ \gamma $:
+\begin{equation}
+\gamma(r_1,r_2,R_1,R_2)=\frac{1}{2}\big\{1+\tanh[\sigma\cdot(r_1\cdot
+  R_1-R_1^2/2)]\cdot\tanh[\sigma\cdot(r_2\cdot R_2-R_2^2/2)]\big\}
+\label{eq:gamma}
+\end{equation}
+\noindent
+Furthermore, a potential morphing was conducted for pursuing a DPT reaction at a target barrier.
+\begin{equation}
+V_{\rm DPT}^{\rm target}=\frac{\Delta E_b^{\rm target}}{\Delta E_b}\cdot V_{\rm DPT}
+\label{eq:morph}
+\end{equation}
+Finally, a selection of DPT barriers were analyzed and a barrier between 5 and 7 kcal/mol was inferred and compared with a barrier of 7.9 kcal/mol from quantum calculations at the level of CCSD(T)/aug-cc-pVTZ.
+Therefore, combining experiment and atomistic simulations allowed us to estimate
+the barrier for proton transfer through comparison of spectroscopic signatures in the OH-stretching regions. 
+
+
+\section{Atomistic simulations with multipole electrostatics}
     
 \section*{Acknowledgments}
 The NCCR MUST (to MM) and the University of Basel are acknowledged.
