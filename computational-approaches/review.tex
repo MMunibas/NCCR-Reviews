@@ -81,6 +81,79 @@ the barrier for proton transfer through comparison of spectroscopic signatures i
 
 \section{Atomistic simulations with multipole electrostatics}
     
+\section{MTP Force Fields}
+\noindent
+The combination of computation and experiment is able to provide an atomistically refined picture of the molecular dynamics of condensed phase systems on the picosecond timescale of complex solvated systems. Detailed atomistic simulations can link experimentally observed dynamics to an underlying structural interpretation of spectroscopic responses in the frequency- and time-domain of complex systems in the condensed phase. Experiments are highly sensitive to the environmental dynamics around suitable probe, and the relevant dynamics is governed by electrostatic and van der Waals interactions. In order to provide a realistic description of the spectroscopy, energetics and dynamics of systems, especially for solution-phase simulations, the quality of the underlying computational model needs to be sufficiently accurate.
+
+\noindent
+A quantum-mechanical description would present the most rigorous representation, however the computational limitations restrict the amount of sampling one would carry out. As an example, for an isolated chromophores in solution, at least several nanoseconds of MD simulations are required which corresponds to 10$^6$ energy evaluations to be carried out.This is why one resorts to more apporximate force-field simulations, which allow extensive sampling of configurational space. The validity of the underlying computational model is verified by comparing with reference data from experiments.Since the relevant dynamics is governed by electrostatic and van der Waals interactions, multipolar and polarisable force fields are necessary for the interpretation of time scales and structural changes at atomistic level. However, the point-charge force fields are not necessarily inferior compared to MTP parameterization depending on the molecule considered and the property studied.
+
+\noindent
+The utility of atomistic simulations depends on a number of essential prerequisites. And since the relevant dynamics is governed by electrostatic and vdW interactions a robust parameterization of the non-bonded interaction is required.The accuracy of the optimized parameters is evaluated  by comparing the observables obtained from atomistic simulations to experimental data.A fitting producedure was recently developed, which facilitates the tedious force fields, and is made available as a friendly graphics-based interface.
+
+
+\subsection{Force Field Parameterization}
+In conventional force fields, the electrostatic potential is represented by atom-centered point charges (PC). This approximation represents the fastest way to describe the charges. Every atom is simply assigned with one charge located in its core. The value of these charges are calculated to be as close as possible to the actual electrostatic potential. However in the case of halogens, the point charge method presents limitations toward the "sigma-hole" feature. The sigma-hole is due to the anisotropy of the atom's charge distribution. It represents a depletion of electronic density prolonging the C-X bond, concomitant with a build-up on its sides. This is why in these simulations we will use the multipole electrostatics MTP, that is a higher-order expansion of the electrostatic potential, therefore the atoms are described by monopoles (point charges), dipoles and quadrupoles. Thus, polarization effects are taken into account by fitting the system's driving forces on interatomic interaction potentials derived in part from electronic structure calculations and from experimental data.
+\noindent
+ Nonbonded interactions refer to van der Waals terms and the electrostatic terms between all atom pairs. The parameterization of the force-field rely on the optimization of these parameters through fitting on gas-phase calculations and on experimental data, where the charges or multipoles are first fit to the {\it ab initio} calculated electrostatic potential (ESP) and then the nonbonded parameters are fit to best reproduce thermodynamic properties (density $\rho$, heat of vaporization $\Delta H_{\rm vap}$ and hydration free energy  $\Delta G_{\rm hyd}$). 
+ 
+ \noindent
+ First, PC or MTP parameters of each compound are derived from the ab-initio electrostatic potential (ESP) of the gas-phase molecule: MP2 level with aug-cc-pVDZ basis set using G09 software. This analysis is based on the electron density which is used to derive the potential and thus the multipole expansion. The most widely used method to obtain atomic multipole moments is the Distributed Multipole Analysis (DMA).  Second, ESPs are fit to PC / MTP parameters in the first interaction belt: by choosing fit parameters, running the optimization and evaluating the error in reproducing the ESP.
+\noindent
+After the electrostatic optimization, the van der Waals parameters are scaled to best reproduce the experimental values of density, heat of formation and hydration free energies. The nonbonded parameters from the CGenFF\cite{cgenff2012} force field were used as a starting point. Based on those and multipoles from a  GDMA analysis\cite{Stone05p1128} of the electron density calculated at the MP2\cite{gordon88mp2}/augcc-pVDZ\cite{dunning89BtoNe,dunning93AltoAr} level of theory the electrostatic potential (ESP) was fit to best reproduce the {\it ab  initio} density while keeping the point charges as close to the CGenFF PCs. The MTP model which gives the least value for root mean square energy (RMSE) between the calculated and fitted ESP are the ones used for MD simulations.  \\
+   \noindent
+   {\it The heat of vaporization} was determined from MD simulations (see
+   below) according to\cite{junmei2011}
+   \begin{equation} 
+   \label{heat_eqn}
+   \Delta H_{\rm vap}(T) = E_{\rm gas}(T) -  E_{\rm liq}(T) + RT
+   \end{equation}
+   where $E_{\rm gas}$ and $E_{\rm liq}$ are the potential energies of
+   one molecule in the gas and liquid phases, $T$ is the temperature and
+   $R$ is the gas constant.  The gas-phase energy is computed from the
+   minimized energy and the number of atoms, $N$, and constrained degrees
+   of freedom, $N_{\rm cons}$, in the molecule
+   \begin{equation} 
+   \label{heat_eqn2}
+   \Delta E_{\rm gas}(T) = E_{\rm gas}^{minimized} +
+   \frac{1}{2}RT(3N-6-N_{\rm cons})
+   \end{equation}
+   {\it Free energies of hydration} (i.e. solvation free energy in water) were
+   computed by thermodynamic integration (TI) method. With the use of
+   thermodynamic cycle, the hydration free energy $\Delta G_{\rm hyd}$ =
+   $\Delta G_{\rm wat}$ - $\Delta G_{\rm vac}$ was calculated, where
+   $\Delta G_{\rm wat}$ and $\Delta G_{\rm vac}$ corresponds to the free
+   energy of insertion of the solute in a box of water and vacuum. To
+   calculate both thermodynamic observables, a separate $NPT$ simulation
+   was run in which solute molecule was placed in a box of water with
+   dimensions of 28 \AA\/ each.  $NPT$ simulations were performed using
+   the Hoover heat-bath method with pressure coupling\cite{feller1995} at
+   $T = 298$ K, $p = 1$ atm, and the masses of the temperature and
+   pressure piston to roughly 20\% and 2\% of the systems mass,
+   respectively. System studied was heated up at constant volume for 40
+   ps, followed by a 40 ps $NPT$ equilibration using a Langevin damping
+   coefficient on the piston $\gamma_p=$ 20 ps$^{-1}$, and finally a 40
+   ps $NPT$ production run.\\
+ 
+   \subsection{Applications}
+  { \bf Differences in g(r) and N(r) around the C(CX) atoms between the PC and MTP models provide an explanation for :
+   the difference in the calculated ∆Ghyd between both models
+   Reproducing ∆Ghyd when placing MTP on C(CX)
+   
+   
+   Condensed-Phase Multipole Electrostatics
+   
+   Here we use additive force field: CHARMM
+   with provisions to multipolar electrostatics which has shown to be necessary for the interpretation of time scales and structural changes at the atomistic level.
+   
+   Introducing the “Fitting Wizard”
+   
+   Solvation of Fluoro-acetonitrile (FACN) in water
+   
+   Solvent dynamic time scale: Spectral diffusion decay times were obtained from FFCF fits to double or triple exponential decays}
+
+\subsection{conclusion}
+Atomistic simulations are suitable to contribute to a detailed understanding of the molecular dynamics of condensed phase system and paves the way for structural interpretations of spectroscopic responses in the frequency- and time-domain of complex systems
 \section*{Acknowledgments}
 The NCCR MUST (to MM) and the University of Basel are acknowledged.
 
