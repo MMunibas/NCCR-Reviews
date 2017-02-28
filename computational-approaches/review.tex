@@ -260,10 +260,24 @@ prolonging the C-X bond, concomitant with a build-up on its
 sides. This is why in these simulations we will use the multipole
 electrostatics MTP, that is a higher-order expansion of the
 electrostatic potential, therefore the atoms are described by
-monopoles (point charges), dipoles and quadrupoles. Thus, polarization
-effects are taken into account by fitting the system's driving forces
-on interatomic interaction potentials derived in part from electronic
-structure calculations and from experimental data.
+monopoles (point charges), dipoles and quadrupoles. For a comparison
+of PC and MTP electrostatics see Figure \ref{fig:pcvsmtp}. In such an
+approach polarization effects are taken into account by fitting the
+system's driving forces on interatomic interaction potentials derived
+in part from electronic structure calculations and from experimental
+data.
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figs/pc-vs-mtp.png}
+\caption{PC vs MTP: Isosurfaces of the difference between ab initio
+  and PC and MTP ESP for Iodophenol (Iodophen-2-ol). Blue and red
+  regions denote the positive and negative errors, respectively. The
+  plots only show points within the first interaction belt.  }
+\label{fig:pcvsmtp}
+\end{figure}
+
+
 
 \noindent
 Nonbonded interactions refer to van der Waals terms and the
@@ -286,6 +300,22 @@ obtain atomic multipole moments is the Distributed Multipole Analysis
 (DMA).  Second, ESPs are fit to PC / MTP parameters in the first
 interaction belt: by choosing fit parameters, running the optimization
 and evaluating the error in reproducing the ESP.
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figs/halogens.png}
+\caption{Electrostatic Surface Potential (ESP) maps of (form left to
+  right) benzene, fluorobenzen, chlorobenzene, bormobenzene and
+  iodobenzene at the 10$^{-3}$ e$a^{-3}$ iodensity surface. The color
+  scale of the surface potential ranges from -0.021 au (red) to 0.021
+  au (blue). The upper black arrow indicates the increase in the
+  sigma-hole strength of the halogens. The red arrow indicates the
+  decrease of the electron rich region delta$^-$ on the sides of the
+  C-Halogen bond, and the blue arrow indicates the increase of the
+  electron deficient region delta$^+$ along the C-halogen bond.}
+\label{fig:halogens}
+\end{figure}
+
 
 \noindent
 After the electrostatic optimization, the van der Waals parameters are
@@ -335,7 +365,19 @@ respectively. System studied was heated up at constant volume for 40
 ps, followed by a 40 ps $NPT$ equilibration using a Langevin damping
 coefficient on the piston $\gamma_p=$ 20 ps$^{-1}$, and finally a 40
 ps $NPT$ production run.\\
- 
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{figs/solute-in-water.png}
+\caption{Halobenzene-water dynamics. The figure illustrates the two
+  types of positioning of water molecules around the halogen of
+  halobenzene.}
+\label{fig:solute}
+\end{figure}
+
+
+
+
 \subsection{Applications}
 %  { \bf Differences in g(r) and N(r) around the C(CX) atoms between
 %    the PC and MTP models provide an explanation for : the difference
