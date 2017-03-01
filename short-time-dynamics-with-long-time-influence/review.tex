@@ -11,7 +11,7 @@
   Basel, Switzerland}
 \author{Luigi Bonacina, Cederic Schmidt, Geoffrey Gaulier}
 \affiliation[University of Geneva] {Department of Chemistry, University of Geneva}
-\author{Siri C. van Keulen}
+\author{Siri C. van Keulen, Swarnendu Bhattacharyya }
 \affiliation[EPFL] {Department of Chemistry, EPFL}
 \author{QQQQ}
 \affiliation[EPFL] {Department of Chemistry, EPFL}
@@ -19,7 +19,7 @@
 \affiliation[EPFL] {Department of Chemistry, EPFL}
 \author{Peter Hamm}
 \affiliation[University of Zurich] {Department of Chemistry, University of Zurich}
-\author{Ursula Roethlisberger}
+\author{Ursula Rothlisberger}
 \affiliation[EPFL] {Department of Chemistry, EPFL}
 \author{Jean-Pierre Wolf}
 \affiliation[University of Geneva] {Department of Chemistry, University of Geneva}
@@ -72,7 +72,7 @@ small peptides or the molecular dynamics of hydrogen-bonded systems.
 
 Triggering events provide energy which can be supplied to a system of
 interest in various ways. The most natural origin is thermal energy
-which, however, is often inefficient. Other possibilites include
+which, however, is often inefficient. Other possibilities include
 photoexcitation (flash photolysis, electronic excitation), ligand
 binding, pH-change, collisional excitation or the excitation of
 molecular vibrations. {\bf need suitable citations here.} Following
@@ -150,7 +150,7 @@ rebinding in neuroglobin.\cite{MM.cei:2013}
 
 
 
-\section{Systems' Dynamics from Femtoseconds to Milliseconds}
+\section{Systems Dynamics from Femtoseconds to Milliseconds}
 
 
 \subsection{Small Gas Phase Systems: Sulfuric Acid (H$_2$SO$_4$)}
@@ -221,13 +221,13 @@ the climate.
 \includegraphics[width=\textwidth]{fig/reaction-path_time.png}
 \caption{Schematic representation of the possible reaction paths of
   HSO$_3$Cl, including approximate time scales for an high excitation
-  energy ($\nu_{\text{OH}}$ = 5 and 6).}
+  energy ($\nu_{\text{OH}} = 5$ and 6).}
 \label{fig:vibphotodis}
 \end{figure} 
     
 
 \subsection{Medium Sized Gas Phase System: Dynamics in HG$_3$W Observed over 8 Orders of Magnitude in Time}
-L. MacAlasee and co-authors investigated the process of Proton Coupled
+L. MacAleese and co-authors investigated the process of Proton Coupled
 Electron Transfer (PCET) in a silver-containing metal-peptide cation
 synthetized from histidine (H), glycine (G) and tryptophan (W):
 [HG3W+Ag]+. Very notably, the authors were able to observe an overall
@@ -491,11 +491,132 @@ versatile manner.
 
 
 \subsubsection{Halogenated Insulin: Functional Studies Based on Accurate Models from Short Time Simulations}
+Linking time scales in a different context is afforded by a discussion
+of recent work related to the dynamics and energetics of halogenated
+insulins. Halogenation has been found to modify the aggregation and
+binding behaviour of insulin under physiological conditions. In order
+to lay out a roadmap for further modification and optimization of the
+hormone a molecular-level understanding of the energetics and dynamics
+of insulin in various aggregation states is required. The system of
+interest is an iodinated insulin in which a hydrogen atom on the ring
+of TyrB26 was replaced by an iodine atom. Mixed quantum
+mechanical/molecular mechanics simulations would, in principle, be the
+method of choice for such a problem. However, given the large number
+of electronis, the high level of electronic structure calculations
+required and the extended time scales on which the system needs to be
+followed for meaningful comparison with experiment, such an approach
+is currently not viable. Instead, an improved description of the
+intermolecular interactions based on multipolar force fields was
+envisaged and using of this parametrization to follow the dynamics and
+energetics of insulin in different aggregation states and in contact
+with the microreceptor was envisaged.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/param-scheme.pdf}
+\caption{Flowchart illustrating the FW. The left panel corresponds to
+  fitting the MTPs to the ESP as obtained from the electronic
+  structure calculations. The right panel summarizes refinement of LJ
+  parameters for optimal reproduction of selected thermodynamic
+  observables.}
+\label{fig:param}
+\end{figure}
+
+\noindent
+For this, model compounds were first parametrized from {\it ab initio}
+calculations and fitted to available experimental data which included
+hydration free energies $\Delta G_{\rm hyd}$, heat of vaporization and
+the pure solvent density. The electrostatic multipole model
+(MTP)\cite{bereau2013} was obtained for the phenolic ring of TyrB26
+and iodophenolic ring of I-TyrB26. Atomic multipoles are assigned to
+all heavy atoms (but not the hydrogens). The parametrization protocol
+followed a recently developed strategy which includes optimization of
+multipole moments to best represent the electrostatic potential and
+van der Waals parameters to correctly describe experimental solution
+phase data, including the hydration free energy of
+iodophenol.\cite{toolkit:2016,toolkit:2017} MTPs were derived from ab
+initio calculations at the MP2/aug-cc-pVDZ level of theory using
+GAUSSIAN09. The iodine atom was treated by the aug-cc-pVDZ-PP basis
+set with an effective core potential. A parametrization based on such
+data can be expected to describe the most relevant interaction modes
+between solute and solvent in a meaningful way to allow quantitative
+simulations for the situation in the protein. Accurate hydration free
+energies are sensitive to the pico- and nanosecond dynamics around the
+solute.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/esp.png}
+\caption{Top: Electrostatic-potential (ESP) surface maps of phenol,
+  iodophenol and iodophenyl at the 0.001e bohr-3 isodensity. The color
+  scale of the ESP ranges from $-2.12(-2)$ (red) through 0 (green) to
+  $2.12 e(-2)$ (blue). In the upper row the iodine (facing the viewer)
+  exhibits the effect of the electron-donating –OH on the
+  $\sigma$-hole. The lower row shows effects of iodine on the
+  $\pi-$system of the phenol ring.  The angle $\beta$ represents the
+  $\sigma-$hole size as delimited by black dashed lines. $\delta+$ and
+  $\delta-$ represent respective regions of positive and negative
+  charge around the iodine. Bottom: ESP contours of iodophenyl (left)
+  and 2-iodophenol (right), at different isovalues, calculated in the
+  plane of the aromatic ring. The black dashed arrow indicates
+  directionality of the C-I bond. }
+\label{fig:esp}
+\end{figure}
+
+
+\noindent
+In order to guide the experiments, atomistic simulations of insulin
+dimer and insulin monomer complexed to the $\mu$IR were carried
+out. These studies indicated that replacement of one hydrogen atom by
+an iodine at the ortho position of TyrB26 leads to structural
+rearrangements at the dimerization interface and enhanced binding to
+the receptor due to several favourable interactions. These findings
+were subsequently confirmed by X-ray crystallography and affinity
+measurements.\cite{insulin:2016} In particular, the simulations
+predicted insertion of the large iodine atom (atomic radius ca
+two-fold larger than that of carbon) within an internal cleft between
+the A- and B chains (see Figure \ref{fig:insulin}). Such accommodation
+requires a specific reorientation of the B26 side chain. In these
+simulations the internal location of the iodine atom within a protomer
+was found to be compatible with native-like assembly of the dimer
+interface within the hexamer with subtle reorganization of successive
+aromatic-aromatic interactions. The following predictions were then
+verified by determining the crystal structure of a 3-I-TyrB26-insulin
+hexamer at 2.3 \AA\/ resolution. The nonpolar packing of the B26
+iodo-aromatic ring is thus reminiscent of the packing in the WT system.
+
+\noindent
+The binding mode of 3-I-TyrB26 towards the $\mu$IR was also probed
+based on the structure of the monomer-$\mu$IR complex. Remarkably,
+these simulations predicted formation of favorable halogen bonding and
+halogen-directed hydrogen bonding between the modified B26 ring and
+the receptor. At this point it is important to mention that
+accompanying simulations with point charge models only find one
+favourable contact between iodine and the environment at the receptor
+interface which highlights the need for improved electrostatic models
+when considering halogenated compounds. Such directional electrostatic
+interactions, exploiting respectively the $\sigma$-hole of the halogen
+and its electronegative equatorial band, have previously beed observed
+in crystal structures of specific complexes between proteins and
+iodinated ligands.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{fig/insulin-modes.png}
+\caption{Structure of Insulin and receptor domain. Left panels: The
+  monomeric hormone (A and B chains, top panel) forms zinc-free dimers
+  via anti-parallel association of B chain $\alpha$-helices and
+  C-terminal $\beta$-strands (brown, middle panel); two zinc ions then
+  mediate assembly of three dimers to form classical hexamer (bottom
+  panel). Right panels: $\mu$IR domain accompanied with an overlay
+  illustrating insulin in its classical free conformation bound to one
+  of the site to the microreceptor.}
+\label{fig:insulin}
+\end{figure}
 
 
 
 \subsection{Solvated Medium Sized Systems: Ligand Binding in Myoglobin}
-\subsubsection{Majed}
 Our group has been focusing on new methods to probe the electronic and
 structural dynamics of various biological and chemical samples. In
 particular, the implementation of the first ultrafast 2D set up in the
@@ -543,12 +664,9 @@ such as density of states and the structural dynamics play a very
 important role, too.\cite{chergui:2012,chergui:2015}
 
 
-\subsubsection{Connecting Time-Based Information with Structure: Computational Studies of MbNO}
+\section{Large Solvated Systems: Rhodopsin}
 
-
-\subsection{Large Solvated Systems: Rhodopsin}
-
-\section{Experimental Studies: JPW}
+\subsection{Experimental Studies - Do you want a specific title, JP?}
 The vision process, which entails a long cascade of events going from
 initial photon absorption to nerve-impulse generation, is triggered by
 the rhodopsin-bound 11-cis-retinal to all-trans retinal isomerization
@@ -568,9 +686,9 @@ place.\cite{polli:2010,gerber:2006}\\
 
 
 
-\begin{figure}
-\includegraphics[width=\textwidth]{fig/wolf1.png}
-\caption{        }
+\begin{figure}[h]
+\resizebox{!}{0.6\textwidth}{\includegraphics[width=\textwidth]{fig/wolf1.png}}
+\caption{}
 \label{fig:wolf1}
 \end{figure}
 
@@ -587,47 +705,215 @@ that the primary vision step could be modulated by the spectral phase
 of light. However, these works were all performed on molecules in
 solution, while the possibility of extending the phase-sensitive
 interaction with the primary vision step to the overall vision process
-in living beings was far from being assessed.  Moving on this pathway,
-Schmidt et al. have recently investigated whether it is possible to
-manipulate the photo-isomerization yield of photoreceptor molecules in
-a live mouse by modulating the spectral phase of a green femtosecond
-light pulse and record the electric signal generated by the
-retina. Their experiment is based on a KHz amplified Ti:Sapphire laser
-system coupled with a noncollinear parametric amplifier generating 50
-fs pulses at 535 nm. A pulse shaper device is used to act upon the
-spectral phase function generating positively and negatively chirped
-pulses ranging from -1300 to 1300 fs. The beam is sent onto the eye of
-the anesthetized mouse by passing through an index-matching medium to
-correct for the eye curvature. The experimental read-out relies on
-electroretinography (ERG). Namely, the visual response of an
-anesthetized animal is cacquired by three electrodes placed
-respectively in contact with the irradiated eye, the forehead, and
-under skin in the tail (for ground voltage reference). The signals are
-first frequency filtered and pre-amplified. Successively, after being
-processed by a differential amplifier, the resulting signal is fed
-into a fast oscilloscope and converted into a digital trace. So far,
-the researchers limited their investigation to the effect of
-positively and negatively chirped pulses. The results are presented in
-Fig. \ref{fig:wolf2}. In these ERG traces, one can recognize the
-characteristic a- (negative at early times) and b- (positive, at later
-times) waves. The former is mainly attributed to cone activity and the
-latter to second-order retinal neurons from cones. The results
-indicate that there exist significant differences among the traces
-obtained with different pulses, pointing unambiguously to the fact
-that a modulation of photo-isomerization can induce effect at the end
-of the cascade of events leading to the retina signal generation.
+in living beings was far from being assessed.
 
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{fig/wolf2.png}
 \caption{        }
 \label{fig:wolf2}
 \end{figure} 
 
-\subsection{Computational Studies: UR}
+
+Moving on this pathway, Schmidt et al. have recently investigated
+whether it is possible to manipulate the photo-isomerization yield of
+photoreceptor molecules in a live mouse by modulating the spectral
+phase of a green femtosecond light pulse and record the electric
+signal generated by the retina. Their experiment is based on a KHz
+amplified Ti:Sapphire laser system coupled with a noncollinear
+parametric amplifier generating 50 fs pulses at 535 nm. A pulse shaper
+device is used to act upon the spectral phase function generating
+positively and negatively chirped pulses ranging from -1300 to 1300
+fs. The beam is sent onto the eye of the anesthetized mouse by passing
+through an index-matching medium to correct for the eye curvature. The
+experimental read-out relies on electroretinography (ERG). Namely, the
+visual response of an anesthetized animal is cacquired by three
+electrodes placed respectively in contact with the irradiated eye, the
+forehead, and under skin in the tail (for ground voltage
+reference). The signals are first frequency filtered and
+pre-amplified. Successively, after being processed by a differential
+amplifier, the resulting signal is fed into a fast oscilloscope and
+converted into a digital trace. So far, the researchers limited their
+investigation to the effect of positively and negatively chirped
+pulses. The results are presented in Fig. \ref{fig:wolf2}. In these
+ERG traces, one can recognize the characteristic a- (negative at early
+times) and b- (positive, at later times) waves. The former is mainly
+attributed to cone activity and the latter to second-order retinal
+neurons from cones. The results indicate that there exist significant
+differences among the traces obtained with different pulses, pointing
+unambiguously to the fact that a modulation of photo-isomerization can
+induce effect at the end of the cascade of events leading to the
+retina signal generation.
+
+
+\subsection{Rhodopsin: femtosecond \emph{cis-trans} isomerisation induces
+  structural rearrangements on the millisecond timescale}
+
+In the outer segment of rod cells in the retina of vertebrate eyes,
+the protein rhodopsin is present in high concentrations
+\cite{liang2003organization}. In dim light, the membrane-embedded
+rhodopsin is able to convert photons into a signal for the brain,
+which results in eyesight. Rhodopsin belongs to class A of the
+G-protein-coupled receptor (GPCR) family, which has a large impact on
+the function of the human body as these membrane proteins enable
+communication between the intracellular and extracellular side of a
+cell \cite{lagerstrom2008structural}. Class A G-protein-coupled
+receptors consist of seven trans-membrane helices, three intracellular
+and three extracellular loops as well as a C-terminus and an
+N-terminal region (Fig. \ref{intro_rhodopsin2}d). Active GPCRs are
+able to stimulate or inhibit several proteins in the cytosol via
+interactions with G proteins in the intracellular region
+\cite{ritter2009fine}. For several decades rhodopsin has been
+intensely studied as a prototype system to understand the activation
+process of GPCRs. Besides being viewed as an example protein for other
+class A GPCRs, rhodopsin bears also other properties of interest, such
+as low basal activity, a covalently bound chromophore in the active
+site and a high yield of around 65\% for the photoconversion of the
+chromophore's inactive 11-\emph{cis}-retinal state to its active
+\emph{trans} configuration (Fig. \ref{intro_rhodopsin2}a)
+\cite{kim2001wavelength}.
 
 
 
+The \emph{cis-trans} isomerisation of the chromophore initiated by
+photon exposure is the trigger for rhodopsin's conversion from its
+inactive state to its active metarhodopsin II conformation that
+interacts with G proteins in the cytosol. The ultrafast
+\emph{cis-trans} photoisomerisation takes place on the femtosecond
+timescale in the extracellular part of the protein, while the
+structural rearrangements of rhodopsin's intracellular region that
+lead to the active state, occur on the millisecond timescale
+(Fig. \ref{intro_rhodopsin2})
+\cite{pan2001chromophore,jager1997chromophore,jager1997time,ganter1988rhodopsin,struts2011retinal}. Hence,
+eight orders of magnitude in time scales are involved to activate the
+entire protein due to the transduction of the external signal from the
+extracellular to the intracellular region. X-ray crystallography
+experiments have elucidated the structure of inactive (dark state)
+rhodopsin as well as several intermediates that lead to the fully
+active structure
+\cite{li2004structure,choe2011crystal,okada2004retinal,salom2006crystal,deupi2012stabilized,xraybatho}. However,
+not all intermediates of the activation pathway have been resolved and
+protonation reactions that take place during rhodopsin activation are
+difficult to understand via experimental data alone. Therefore,
+besides experimental studies, a significant number of computational
+studies have investigated the chromophore's configurational changes
+during protein activation as well as the impact of the structural
+change of the chromophore on the active site and the rest of the
+protein to obtain a better understanding of the chromophore's
+conversion from an inverse agonist to an agonist
+\cite{altun2008mechanism,mertz2011steric,saam2002molecular,hornak2010light,neri2010role,rohrig2005solvent}.
+
+Early studies of the photoisomerization reaction dynamics based on a
+restricted-open shell Kohn-Sham approach \cite{rohrig2004molecular}
+showed that the \emph{cis-trans} isomerisation of the 11-\emph{cis}
+retinal moiety that initiates rhodopsin activation is highly impacted
+by the shape of the non-polar active site. While in solution,
+\emph{cis-trans} isomerisation can also occur around other bonds than
+the C11-C12 bond
+(Fig. \ref{intro_rhodopsin2})\cite{logunov1996excited,tsukida1977simultaneous},
+rhodopsin's tight active site (Fig. \ref{intro_rhodopsin2}b, c)
+induces a pre-twist of the C10-C11-C12-C13 dihedral angle, which
+favours highly selective isomerisation around
+C11-C12\cite{rohrig2004molecular,rohrig2002early}. Within few hundreds
+of femtoseconds that system relaxes from the first excited state via a
+conical intersection to the ground state. This process can be
+infuenced and tuned by an external field (XXXHERE WE WILl ADD SOME OF
+THE RESULTS ON MCTDH QUANTUM DYNAMICS SIMULATIONS WITH LOCAL AND WITH
+OPTIMAL CONTROLXXXX. The subsequent structural relaxation can be
+followed via classical molecular dynamics simulations with
+force-matched force fields\cite{doemer2013generalized} up to the
+microsecond time
+scale\cite{rohrig2002early,neri2010role,vankeulenrhodopsin} and
+distinct intermediates can be detected. They show that after
+photoisomerisation, a strained \emph{all}-trans configuration of the
+chromophore, photorhodopsin, gradually alters its structure and
+orientation in the active site to a more relaxed conformation. The
+first short-lived intermediate after a few picoseconds is
+bathorhodopsin in which the chromophore has released strain, but still
+includes a highly distorted \emph{all}-trans
+configuration. Bathorhodopsin can form an equilibrium with a
+blue-shifted intermediate (BSI) on the nanosecond time scale, which
+then leads to a more relaxed conformation called lumirhodopsin after a
+few hundred nanoseconds. The alterations in the chromophore's
+configuration and orientation during relaxation induce spectral shifts
+between the several short-lived intermediates that are sampled after
+\emph{cis-trans} isomerisation \cite{sandberg2014low}. These computed
+vertical excitation spectra are in excellent agreement with
+experimental results. The molecular factors that are responsible for
+this spectral tuning have been of special interest and many different
+possibilities have been proposed during the years. By applying machine
+learning algorithms to a large comprehensive data set generated via
+classical and mixed quantum mechanical/molecular mechanical (QM/MM)
+simulations , it was recently possible to identify ta minimal set
+molecular descriptors in an unbiased way. This study shows that the
+principal factors responsible for the spectral tuning are
+intramolecular structural features such as the bond length alternation
+but also few descriptors that capture the relative orientation of the
+chromophore with respect to the active site pocket
+(Fig. \ref{intro_rhodopsin2}a)
+\cite{campomanes2014origin,valsson2013rhodopsin, vankeulenrhodopsin}.
+
+\begin{figure}[h]
+\begin{center}
+\resizebox{!}{0.6\textwidth}{\includegraphics{fig/intro_rhodopsin_extended_2_3.png}}
+\caption{Rhodopsin's activation mechanism. (a) 11-\emph{cis} to
+  all-\emph{trans} photoisomerisation and later deprotonation of
+  covalently bound retinal in rhodopsin due to exposure to light. (b)
+  View from the extracellular region of the retinal moiety in the
+  active site. Courtesy of \cite{vankeulenrhodopsin}. (c) View of the
+  retinal moiety, turned 90$^{\circ}$ compared to image (b), with the
+  Lys296 part located in front. Courtesy of
+  \cite{vankeulenrhodopsin}. (d) X-ray structure of inactive rhodopsin
+  (PDB code 1U19). The black lines indicate the location of the cell
+  membrane. The yellow circle show the location of the G-protein
+  interaction site. (e) Alignment of the active and inactive
+  conformation of rhodopsin, viewed from the intracellular
+  side. Corresponding PDB codes are listed in the same colour as the
+  colour of the protein structure. The main structural changes due to
+  activation are indicated by yellow arrows. (f) X-ray structure of
+  inactive rhodopsin (PDB code 1U19) in which specific regions that
+  are especially affected by retinal's \emph{cis}-\emph{trans}
+  isomerisation are highlighted. The retinal moiety is shown in
+  orange.}\label{intro_rhodopsin2}
+\end{center}
+\end{figure} 
+
+
+
+Further relaxation of the chromophore structure induces deprotonation
+of Lys296's protonated Schiff base (PSB) and protonation of the
+counter ion Glu113 (Fig. \ref{intro_rhodopsin2}a, e)
+\cite{jaeger1994identification}. A recent computational study shows
+that besides Glu113 and the chromophore, also active site water
+molecules as well as Gly90 and Thr94 play significant roles during
+deprotonation of the chromophore \cite{vankeulenrhodopsin}. These
+results emphasise the importance of the residues in the active site as
+well as the involvement of the environment on the activation pathway
+of rhodopsin.
+
+PSB deprotonation initiates further straightening of the
+\emph{all}-trans retinal configuration, which induces helix
+displacement as well as a change in the position of Trp265
+\cite{crocker2006location} and a rearrangement of the hydrogen-bond
+network around Glu122 and His211 (Fig. \ref{intro_rhodopsin2}e)
+\cite{vogel2005agonists,lewis2006proton}. These signature changes that
+take place on the millisecond timescale transduce the structural
+rearrangements in the active site from the extracellular region to the
+core of the protein. On the intracellular side, the isomerisation
+ultimately affects the "closed" interaction site for G proteins that
+includes the conserved residues Glu134, Arg135 and Glu247, called the
+ionic lock (Fig. \ref{intro_rhodopsin2}e). As part of the activation
+process, the salt bridges Glu134-Arg135 and Arg135-Glu247 are broken
+and Glu134 is protonated, leading to an "open" conformation of the
+intracellular region, the signalling state metarhodopsin II
+(Fig. \ref{intro_rhodopsin2}c, d, e)
+\cite{mahalingam2008two,choe2011crystal,deupi2012stabilized}. Rhodopsin's
+meta II configuration is able to interact with G proteins in the
+cytosol that will augment the external signal as one active rhodopsin
+can stimulate multiple G proteins, which will ultimately lead to
+vision.
+
+  
 
 \section{Summary and Outlook}
 The current review summarizes dynamical studies on a range of systems
